@@ -13,24 +13,57 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\問題9">
+      <UniqueIdentifier>{ae22633a-4b84-42cc-9075-e55b5912c4a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\問題1">
+      <UniqueIdentifier>{908fb798-7071-4fb7-a3fb-7a845f9fedbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\問題3">
+      <UniqueIdentifier>{bb80b8dc-4d22-4f8f-8733-f3140fc8a2b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\問題2">
+      <UniqueIdentifier>{61959116-6b0f-4ed6-aeb3-a5ec58c7b2f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\問題9">
+      <UniqueIdentifier>{3bd429e9-4bdb-4a5a-9341-6282ee8a0dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\問題2">
+      <UniqueIdentifier>{fb4bc95a-fc0c-4f54-8636-2b18a0703953}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="janken.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\問題9</Filter>
     </ClCompile>
     <ClCompile Include="kazuate.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\問題9</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>ソース ファイル\問題9</Filter>
+    </ClCompile>
+    <ClCompile Include="StrFunction.cpp">
+      <Filter>ソース ファイル\問題1</Filter>
+    </ClCompile>
+    <ClCompile Include="calc.cpp">
+      <Filter>ソース ファイル\問題2</Filter>
+    </ClCompile>
+    <ClCompile Include="sum.cpp">
+      <Filter>ソース ファイル\問題2</Filter>
+    </ClCompile>
+    <ClCompile Include="mult.cpp">
+      <Filter>ソース ファイル\問題3</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="calc.h">
+      <Filter>ヘッダー ファイル\問題2</Filter>
+    </ClInclude>
     <ClInclude Include="janken.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\問題9</Filter>
     </ClInclude>
     <ClInclude Include="kazuate.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\問題9</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

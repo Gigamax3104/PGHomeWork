@@ -19,11 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="calc.cpp" />
     <ClCompile Include="janken.cpp" />
     <ClCompile Include="kazuate.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="mult.cpp" />
+    <ClCompile Include="StrFunction.cpp" />
+    <ClCompile Include="sum.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="calc.h" />
     <ClInclude Include="janken.h" />
     <ClInclude Include="kazuate.h" />
   </ItemGroup>
