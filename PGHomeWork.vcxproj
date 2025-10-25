@@ -19,9 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DynamicAllocation.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="calc.h" />
     <ClInclude Include="janken.h" />
     <ClInclude Include="kazuate.h" />

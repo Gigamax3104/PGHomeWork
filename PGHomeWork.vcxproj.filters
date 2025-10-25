@@ -46,9 +46,4 @@
       <Filter>ヘッダー ファイル\問題9</Filter>
     </ClInclude>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="DynamicAllocation.cpp">
-      <Filter>ソース ファイル\問題10</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
