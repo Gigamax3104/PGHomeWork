@@ -31,29 +31,9 @@
     <Filter Include="ヘッダー ファイル\問題2">
       <UniqueIdentifier>{fb4bc95a-fc0c-4f54-8636-2b18a0703953}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="janken.cpp">
-      <Filter>ソース ファイル\問題9</Filter>
-    </ClCompile>
-    <ClCompile Include="kazuate.cpp">
-      <Filter>ソース ファイル\問題9</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>ソース ファイル\問題9</Filter>
-    </ClCompile>
-    <ClCompile Include="StrFunction.cpp">
-      <Filter>ソース ファイル\問題1</Filter>
-    </ClCompile>
-    <ClCompile Include="calc.cpp">
-      <Filter>ソース ファイル\問題2</Filter>
-    </ClCompile>
-    <ClCompile Include="sum.cpp">
-      <Filter>ソース ファイル\問題2</Filter>
-    </ClCompile>
-    <ClCompile Include="mult.cpp">
-      <Filter>ソース ファイル\問題3</Filter>
-    </ClCompile>
+    <Filter Include="ソース ファイル\問題10">
+      <UniqueIdentifier>{5448b477-709d-4ae8-a0d5-809ce8d8894a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="calc.h">
@@ -65,5 +45,10 @@
     <ClInclude Include="kazuate.h">
       <Filter>ヘッダー ファイル\問題9</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DynamicAllocation.cpp">
+      <Filter>ソース ファイル\問題10</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
