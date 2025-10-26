@@ -101,12 +101,14 @@ static BringOut ExitHand(const char* hand) {
 		*hand == 'P' || *hand == 'p' ? Paper : None;
 }
 
+//勝敗の判断をする関数
 static Judgement LastJudgement(BringOut& Player, BringOut& CPU) {
 	return
 		(Player == Rock && CPU == Scissors) || (Player == Scissors && CPU == Paper) ||
 		(Player == Paper && CPU == Rock) ? Win : Player == CPU ? Draw : Lose;
 }
 
+//勝敗メッセージを表示する関数
 static bool ShowResult(BringOut& Player, BringOut& CPU,const Judgement judgement) {
 	const char* massage[] = {
 		"やったね！あなたの勝ち！",

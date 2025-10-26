@@ -8,6 +8,7 @@ static void Random(int& number);
 static void Show(int& number);
 static JudgeMassage InputJudge(int& number,int& input);
 
+//主に動作する関数
 void KazuateMove() {
 	int number;
 
@@ -15,12 +16,14 @@ void KazuateMove() {
 	Show(number);
 }
 
+//ランダムに数字を決める関数
 static void Random(int& number) {
 	srand((unsigned int)time(NULL));
 
 	number = rand() % 100 + 1;
 }
 
+//表示する関数
 static void Show(int& number) {
 	int input;
 	const char* massage[] = {
@@ -41,6 +44,7 @@ static void Show(int& number) {
 	} while (InputJudge(number, input) != Draw2);
 }
 
+//入力した数と、目的の数を比較する関数
 static JudgeMassage InputJudge(int& number,int& input) {
 	return
 		number - input > 10 ? High :

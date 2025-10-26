@@ -39,11 +39,13 @@
     <ClInclude Include="calc.h">
       <Filter>ヘッダー ファイル\問題2</Filter>
     </ClInclude>
-    <ClInclude Include="janken.h">
-      <Filter>ヘッダー ファイル\問題9</Filter>
-    </ClInclude>
-    <ClInclude Include="kazuate.h">
-      <Filter>ヘッダー ファイル\問題9</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="問題9\janken.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="問題9\kazuate.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
