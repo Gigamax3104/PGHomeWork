@@ -134,6 +134,7 @@ static bool ShowResult(BringOut& Player, BringOut& CPU,const Judgement judgement
 	}
 }
 
+//©•ª‚Ìè‚Æ‘Šè‚Ìè‚ğ•\¦‚·‚éŠÖ”
 static void ShowEachOtherHand(const char* handmassage[],BringOut& Player, BringOut& CPU) {
 	cout << "©•ª‚Ìè:" << flush << handmassage[Player] << endl;
 	cout << "‘Šè‚Ìè:" << flush << handmassage[CPU] << endl;
