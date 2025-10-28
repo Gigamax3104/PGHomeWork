@@ -13,10 +13,7 @@ int main() {
 
 	int* Student = new int[size];
 
-	for (int i = 0; i < size; i++) {
-		cin >> Student[i];
-		total = Total(&Student[i], size);
-	}
+	total = Total(Student, size);
 
 	cout << "合計値は" << total << "点、" << "平均値は" << Average(total, size) << "点です。";
 
@@ -24,14 +21,13 @@ int main() {
 }
 
 static int Total(int* student,int size) {
-	static int total = 0;
+	int total = 0;
 
-	total += *student;
-	//for (int i = 0; i < size; i++) {
-	//	cout << i + 1 << "人目:" << flush;
-	//	cin >> student[i];
-	//	total += student[i];
-	//}
+	for (int i = 0; i < size; i++) {
+		cout << i + 1 << "人目:" << flush;
+		cin >> student[i];
+		total += student[i];
+	}
 
 	return total;
 }
