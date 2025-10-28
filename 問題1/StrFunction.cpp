@@ -17,7 +17,13 @@ int main() {
 	cin >> s2;
 
 	cout << (unsigned int)&s1 << endl;
-	cout << (unsigned int)str_match(s1, s2) << endl;
+
+	if (str_match(s1, s2) == nullptr) {
+		cout << "null" << endl;
+	}
+	else {
+		cout << (unsigned int)str_match(s1, s2) << endl;
+	}
 }
 
 const char* str_match(const char* s1, const char* s2) {
