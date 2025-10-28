@@ -11,7 +11,7 @@ enum Choice {
 
 int main() {
 	int choice;
-	while (true) {
+	do {
 		cout << "選択してね！\n1 : じゃんけんゲーム、2 : 数当てゲーム、3 : 終了(それ以外を入力すると強制終了します。)>" << flush;
 		cin >> choice;
 		cout << endl;
@@ -28,5 +28,5 @@ int main() {
 		if (choice == End) {
 			break;
 		}
-	}
+	}while(choice < Janken || choice > End)
 }
