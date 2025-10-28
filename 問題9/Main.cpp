@@ -25,5 +25,5 @@ int main() {
 			break;
 		}
 
-	} while (choice < Janken || choice > End);
+	} while (choice < End);
 }

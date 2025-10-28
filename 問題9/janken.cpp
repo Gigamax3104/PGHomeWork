@@ -4,13 +4,15 @@
 #include "janken.h"
 using namespace std;
 
-static void JankenMove(int& size);
+static void JankenMove(int size);
 static BringOut ExitHand(const char* hand);
-static bool HandJudgement(char hand, const char* handkind[], int size);
-static void ThinkHand(const char* HandKind[],int size,BringOut& Player, BringOut& CPU);
+static bool HandJudgement(char hand, const char* handkind,int size);
+static void ThinkHand(const char* handKind,int size,BringOut& Player, BringOut& CPU);
 static Judgement LastJudgement(BringOut& Player, BringOut& CPU);
 static bool ShowResult(BringOut& Player, BringOut& CPU,const Judgement judgement);
 static void ShowEachOtherHand(const char* handmassage[],BringOut& Player, BringOut& CPU);
+
+static const char HandKind[] = "GgSsPp"; //内部リンケージ + 定数
 
 //回数入力
 void LimitInput() {
@@ -33,10 +35,7 @@ void LimitInput() {
 	JankenMove(size);
 }
 //主に動作する関数
-static void JankenMove(int& size) {
-	const char* HandKind[] = {
-	"G","g","S","s","P","p"
-	};
+static void JankenMove(int size) {
 
 	int size2 = sizeof HandKind / sizeof HandKind[0];
 
@@ -53,7 +52,7 @@ static void JankenMove(int& size) {
 }
 
 //お互いの手を決める関数
-static void ThinkHand(const char* HandKind[],int size,BringOut& Player, BringOut& CPU) {
+static void ThinkHand(const char* handKind,int size,BringOut& Player, BringOut& CPU) {
 	srand((unsigned int)time(NULL));
 
 	char PlayerHand;
@@ -62,21 +61,21 @@ static void ThinkHand(const char* HandKind[],int size,BringOut& Player, BringOut
 		cout << "自分の手を入力してください。(G : グー、S : チョキ、P ; パー)>" << flush;
 		cin >> PlayerHand;
 
-	} while (HandJudgement(PlayerHand, HandKind,size));
+	} while (HandJudgement(PlayerHand, handKind, size));
 
 	Player = ExitHand(&PlayerHand);
 
 	int idx = rand() % size;
-	CPU = ExitHand(HandKind[idx]);
+	CPU = ExitHand(&handKind[idx]);
 }
 
 //ThinkHand関数にて、HandKindの中身と自分が入力した文字が一緒であるか判定する関数
-static bool HandJudgement(char hand, const char* handkind[],int size) {
+static bool HandJudgement(char hand, const char* handkind,int size) {
 	int i = 0;
 
 	while (i < size) {
 		
-		if (hand != *handkind[i]) {
+		if (hand != handkind[i]) {
 			i++;
 		}
 		else {
