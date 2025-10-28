@@ -41,7 +41,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="問題1\StrFunction.cpp">
+    <ClCompile Include="問題2\calc.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="問題3\mult.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

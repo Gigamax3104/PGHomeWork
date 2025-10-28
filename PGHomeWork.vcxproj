@@ -22,7 +22,8 @@
     <ClInclude Include="calc.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="問題1\StrFunction.cpp" />
+    <ClCompile Include="問題2\calc.cpp" />
+    <ClCompile Include="問題3\mult.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

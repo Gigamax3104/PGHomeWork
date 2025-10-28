@@ -16,13 +16,12 @@ int main() {
 	cout << "2”Ô–Ú:" << flush;
 	cin >> s2;
 
-	cout << s1 << endl;
-
 	if (str_match(s1, s2) == nullptr) {
-		cout << "null" << endl;
+		cout << "“–‚Ä‚Í‚Ü‚Á‚½•¶š‚Í‚ ‚è‚Ü‚¹‚ñII" << endl;
 	}
 	else {
-		cout << str_match(s1, s2) << endl;
+		cout << "Œ³‚Ì•¶š—ñ:" << s1 << endl;
+		cout << "“–‚Ä‚Í‚Ü‚Á‚½•¶š—ñ:" << str_match(s1, s2) << endl;
 	}
 }
 

@@ -1,7 +1,7 @@
 #include	<iostream>
 using namespace std;
 
-static int mult(int& a, int& b);
+static int mult(int a, int b);
 
 int main() {
 	int a = 0;
@@ -13,6 +13,6 @@ int main() {
 	cout << "Š|‚¯Z‚µ‚½Œ‹‰Ê‚Í" << mult(a, b) << "‚Å‚·B" << endl;
 }
 
-static int mult(int& a, int& b) {
+static int mult(int a, int b) {
 	return a * b;
 }
