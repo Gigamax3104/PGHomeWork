@@ -26,7 +26,7 @@ int main() {
 		}
 
 		if (choice == End) {
-
+			break;
 		}
 	}
 }
