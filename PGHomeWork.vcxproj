@@ -20,10 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="calc.h" />
+    <ClInclude Include="問題9\janken.h" />
+    <ClInclude Include="問題9\kazuate.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="問題2\calc.cpp" />
-    <ClCompile Include="問題3\mult.cpp" />
+    <ClCompile Include="問題9\janken.cpp" />
+    <ClCompile Include="問題9\kazuate.cpp" />
+    <ClCompile Include="問題9\Main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

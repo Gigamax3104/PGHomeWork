@@ -39,12 +39,21 @@
     <ClInclude Include="calc.h">
       <Filter>ヘッダー ファイル\問題2</Filter>
     </ClInclude>
+    <ClInclude Include="問題9\janken.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="問題9\kazuate.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="問題2\calc.cpp">
+    <ClCompile Include="問題9\janken.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="問題3\mult.cpp">
+    <ClCompile Include="問題9\kazuate.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="問題9\Main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,34 +2,67 @@
 #include    <cstring>
 using namespace std;
 
-const char* str_match(const char* s1, const char* s2) {
-    if (!s1 || !s2 || *s2 == '\0') return nullptr;
+enum Check
+{
+	RESULT_P1_WIN = 0,
+	RESULT_P2_WIN = 1,
+	RESULT_DRAW = 2,
+	ERROR = -1
+};
 
-    //unsigned int と intで結果が違ってくる
-    size_t len1 = strlen(s1);
-    size_t len2 = strlen(s2);
+static Check check(char a, char b)
+{
+	if ((a == 'g' && b == 't') || (a == 't' && b == 'p') || (a == 'p' && b == 'g'))
+	{
+		return RESULT_P1_WIN;
+	}
+	else if ((a == 'g' && b == 'p') || (a == 't' && b == 'g') || (a == 'p' && b == 't'))
+	{
+		return RESULT_P2_WIN;
+	}
+	else if (a == b)
+	{
+		return RESULT_DRAW;
+	}
+	else
+	{
+		return ERROR;
+	}
+}
 
-    for (size_t i = 0; i <= len1 - len2; ++i) {
-        if (strncmp(s1 + i, s2, len2) == 0) {
-            return s1 + i;
-        }
-    }
-    return nullptr;
+void janken()
+{
+	char p1;
+	char p2;
+	cout << "Player1(g グー、t チョキ、p パー、e 終了) > " << flush;
+	cin >> p1;
+	if (p1 == 'e')
+	{
+		cout << "終了" << endl;
+		return;
+	}
+	cout << "Player2(g グー、t チョキ、p パー、e 終了) > " << flush;
+	cin >> p2;
+	if (p2 == 'e')
+	{
+		cout << "終了" << endl;
+		return;
+	}
+	Check a = check(p1, p2);
+	if (a == ERROR)
+	{
+		cout << "エラー" << endl;
+		return;
+	}
+	const char* result[] =
+	{
+		"player1の勝ち",
+		"player2の勝ち",
+		"引き分け"
+	};
+	cout << result[a] << endl << endl;;
 }
 
 int main() {
-    const char* s1 = "abc";
-    const char* s2 = "aaaaaa";
-
-    const char* result = str_match(s1, s2);
-
-    if (result) {
-        cout << "一致した位置: " << result << endl;
-        cout << "インデックス: " << result - s1 << endl;
-    }
-    else {
-        cout << "一致する部分文字列は見つかりませんでした。" << endl;
-    }
-
-    return 0;
+	janken();
 }
