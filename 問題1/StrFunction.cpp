@@ -17,7 +17,7 @@ int main() {
 	cin >> s2;
 
 	if (str_match(s1, s2) == nullptr) {
-		cout << "当てはまった文字はありません！！" << endl;
+		cout << "当てはまった文字列はありません！！" << endl;
 	}
 	else {
 		cout << "元の文字列:" << s1 << endl;
@@ -27,17 +27,29 @@ int main() {
 
 const char* str_match(const char* s1, const char* s2) {
 	int idx = 0;
-	size_t SL = strlen(s2);
+	bool next = false;
+	const char* str2 = s2;
 
-	for (int i = 0; *(s1 + i) != '\0'; i++) {
-		if(*(s1 + i) == *(s2 + idx)) {
+	while (*s1 != '\0') {
+		if (*s1 == *s2) {
+			next = false;
 			idx++;
+			s1++;
+			s2++;
+		}
+		else{
+			if (next) {
+				s1++;
+			}
+
+			next = true;
+			idx = 0;
+			s2 = str2;
 		}
 
-		if (idx == SL) {
-			return s1 + ((i - SL) + 1);
+		if (*s2 == '\0') {
+			return s1 - idx;
 		}
-
 	}
 
 	return nullptr;

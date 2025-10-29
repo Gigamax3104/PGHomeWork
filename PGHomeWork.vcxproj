@@ -20,11 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="calc.h" />
-    <ClInclude Include="問題9\janken.h" />
-    <ClInclude Include="問題9\kazuate.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="問題11\DynamicAllocation.cpp" />
+    <ClCompile Include="問題1\StrFunction.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
