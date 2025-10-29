@@ -30,7 +30,7 @@ const char* str_match(const char* s1, const char* s2) {
 	bool next = false;
 	const char* str2 = s2;
 
-	while (*s1 != '\0') {
+	while (*s1) {
 		if (*s1 == *s2) {
 			next = false;
 			idx++;
