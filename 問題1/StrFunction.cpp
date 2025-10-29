@@ -47,7 +47,7 @@ const char* str_match(const char* s1, const char* s2) {
 			s2 = str2;
 		}
 
-		if (*s2 == '\0') {
+		if (!*s2) {
 			return s1 - idx;
 		}
 	}
