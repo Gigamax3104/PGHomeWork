@@ -75,7 +75,7 @@ static bool HandJudgement(char hand, const char* handkind,int size) {
 
 	while (i < size) {
 		
-		if (hand != handkind[i]) {
+		if (hand != HandKind[i]) {
 			i++;
 		}
 		else {
@@ -95,9 +95,9 @@ static bool HandJudgement(char hand, const char* handkind,int size) {
 //“ü—Í‚µ‚½•¶Žš‚âAƒ‰ƒ“ƒ_ƒ€‚ÅŒˆ‚ß‚ç‚ê‚½•¶Žš‚ð—ñ‹“‘Ì‚Å”»•Ê‚·‚éŠÖ”
 static BringOut ExitHand(const char* hand) {
 	return
-		*hand == 'G' || *hand == 'g' ? Rock :
-		*hand == 'S' || *hand == 's' ? Scissors :
-		*hand == 'P' || *hand == 'p' ? Paper : None;
+		*hand == HandKind[0] || *hand == HandKind[1] ? Rock :
+		*hand == HandKind[2] || *hand == HandKind[3] ? Scissors :
+		*hand == HandKind[4] || *hand == HandKind[5] ? Paper : None;
 }
 
 //Ÿ”s‚Ì”»’f‚ð‚·‚éŠÖ”
