@@ -5,7 +5,7 @@ using namespace std;
 int str2int(const char* s);
 
 int main() {
-	const char* s = "";
+	const char* s = "128";
 
 	int a = str2int(s);
 
@@ -40,28 +40,7 @@ int str2int(const char* s) {
 	s = save;
 
 	while (*s) {
-		switch (*s) {
-			case '0':
-				number[idx] = 0; break;
-			case '1':
-				number[idx] = 1; break;
-			case '2':
-				number[idx] = 2; break;
-			case '3':
-				number[idx] = 3; break;
-			case '4':
-				number[idx] = 4; break;
-			case '5':
-				number[idx] = 5; break;
-			case '6':
-				number[idx] = 6; break;
-			case '7':
-				number[idx] = 7; break;
-			case '8':
-				number[idx] = 8; break;
-			case '9':
-				number[idx] = 9; break;
-		}
+		number[idx] = *s - '0';
 
 		idx++;
 		s++;

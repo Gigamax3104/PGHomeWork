@@ -19,8 +19,8 @@ int main() {
 	cout << pStr2 << endl; // abcd‚Æ•\¦‚³‚ê‚é
 }
 
-static void swap_ptr(char*& pStr1,char*& pStr2) {
-	char* p = pStr1;
-	pStr1 = pStr2;
-	pStr2 = p;
+static void swap_ptr(char** pStr1,char** pStr2) { //*&‚æ‚èA**‚Ì•û‚ª—Ç‚¢B
+	char* p = *pStr1;
+	*pStr1 = *pStr2;
+	*pStr2 = p;
 }
