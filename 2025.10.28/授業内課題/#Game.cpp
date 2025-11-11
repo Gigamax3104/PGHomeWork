@@ -71,7 +71,7 @@ const char* map[] = {"\
 static void InputField();
 static void Load(const char* map,const char*map2,bool& change);
 static bool Operation(Asset* asset,Asset* asset2, int size,int size2,bool& change);
-static void ReLoad(Asset* asset, Asset* asset2,int size,int size2,int moveidx,bool sign,bool& move,bool& change,bool& judge);
+static void ReLoad(Asset* asset, Asset* asset2,int size,int size2,int moveidx,int& turn,bool sign,bool& move,bool& change,bool& judge);
 
 int main() {
 	InputField();
@@ -169,11 +169,13 @@ static void Load(const char* map,const char* map2,bool& change) {
 }
 
 static bool Operation(Asset* asset, Asset* asset2, int size,int size2,bool& change) {
+	static int turn = 0;
 	char choice;
 	bool move = true;
 	bool GoalJudge = false;
 
 	do {
+		cout << turn + 1 << "ターン目" << endl;
 		cout << "動く方向を選択してください。(横:a(左) or d(右)、縦:w(上) or s(下))>" << flush;
 		cin >> choice;
 	} while (choice != 'a' && choice != 'd' && choice != 'w' && choice != 's');
@@ -181,29 +183,30 @@ static bool Operation(Asset* asset, Asset* asset2, int size,int size2,bool& chan
 	if (!change) {
 		switch (choice) {
 		case 'a':
-			ReLoad(asset,asset2, size,size2, 1, false, move, change, GoalJudge); break;
+			ReLoad(asset,asset2, size,size2, 1,turn, false, move, change, GoalJudge); break;
 		case 'd':
-			ReLoad(asset, asset2, size,size2, 1, true, move, change, GoalJudge); break;
+			ReLoad(asset, asset2, size,size2, 1, turn, true, move, change, GoalJudge); break;
 		case 'w':
-			ReLoad(asset,asset2, size,size2, 23, false, move, change, GoalJudge); break;
+			ReLoad(asset,asset2, size,size2, 23, turn, false, move, change, GoalJudge); break;
 		case 's':
-			ReLoad(asset, asset2, size,size2, 23, true, move, change, GoalJudge); break;
+			ReLoad(asset, asset2, size,size2, 23, turn, true, move, change, GoalJudge); break;
 		}
 	}
 	else {
 		switch (choice) {
 		case 'a':
-			ReLoad(asset, asset2, size,size2, 1, false, move, change, GoalJudge); break;
+			ReLoad(asset, asset2, size,size2, 1, turn, false, move, change, GoalJudge); break;
 		case 'd':
-			ReLoad(asset, asset2, size,size2, 1, true, move, change, GoalJudge); break;
+			ReLoad(asset, asset2, size,size2, 1, turn, true, move, change, GoalJudge); break;
 		case 'w':
-			ReLoad(asset, asset2, size,size2, 23, false, move, change, GoalJudge); break;
+			ReLoad(asset, asset2, size,size2, 23, turn, false, move, change, GoalJudge); break;
 		case 's':
-			ReLoad(asset, asset2, size,size2, 23, true, move, change, GoalJudge); break;
+			ReLoad(asset, asset2, size,size2, 23, turn, true, move, change, GoalJudge); break;
 		}
 	}
 
-	if (GoalJudge) {
+
+	if (GoalJudge || turn == 30) {
 		return false;
 	}
 	else {
@@ -211,7 +214,7 @@ static bool Operation(Asset* asset, Asset* asset2, int size,int size2,bool& chan
 	}
 }
 
-static void ReLoad(Asset* asset,Asset* asset2,int size,int size2, int moveidx, bool sign,bool& move,bool& change,bool &judge) {
+static void ReLoad(Asset* asset,Asset* asset2,int size,int size2, int moveidx,int& turn, bool sign,bool& move,bool& change,bool &judge) {
 	static const Asset Save = Warp;
 	static bool warpchange = false;
 
@@ -335,7 +338,9 @@ static void ReLoad(Asset* asset,Asset* asset2,int size,int size2, int moveidx, b
 		}
 	}
 
-	if (!judge) {
+	turn++;
+
+	if (!judge && turn < 30) {
 		if (change) {
 			for (int i = 0; i < size2; i++) {
 				switch (asset2[i]) {
@@ -372,8 +377,12 @@ static void ReLoad(Asset* asset,Asset* asset2,int size,int size2, int moveidx, b
 				}
 			}
 		}
+
+	}
+	else if(judge){
+		cout << "Goal!!" << endl;
 	}
 	else {
-		cout << "Goal!!" << endl;
+		cout << "GameOver" << endl;
 	}
 }
