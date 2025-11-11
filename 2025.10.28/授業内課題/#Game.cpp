@@ -81,7 +81,7 @@ static void InputField() {
 	int stage;
 	bool change = true;
 
-	cout << "ステージを選択してください。(1 or 2 or 3)>" << flush;
+	cout << "ステージを選択してください。(1 or 2)>" << flush;
 	cin >> stage;
 
 	if (stage == 1) {

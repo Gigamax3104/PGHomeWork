@@ -40,4 +40,9 @@
       <Filter>ヘッダー ファイル\問題2</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="2025.10.28\授業内課題\#Game.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

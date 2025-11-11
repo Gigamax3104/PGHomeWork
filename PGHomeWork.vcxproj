@@ -21,6 +21,9 @@
   <ItemGroup>
     <ClInclude Include="calc.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="2025.10.28\授業内課題\#Game.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
