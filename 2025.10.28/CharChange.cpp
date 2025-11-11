@@ -4,8 +4,8 @@ using namespace std;
 void swap_string(char* s1, char* s2);
 
 int main() {
-	char a[] = "abcdef";
-	char b[] = "xyz";
+	char a[100] = "abcdef";
+	char b[100] = "xyz";
 
 	swap_string(a, b);
 
