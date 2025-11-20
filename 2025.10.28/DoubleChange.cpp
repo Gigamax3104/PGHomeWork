@@ -18,16 +18,21 @@ int main() {
 
 double str2double(const char* s) {
 	int idx = 0;
+	int idx2 = 0;
 	double total = 0;
-	bool Change = false;
+	bool Stop = false;
 	const char* save = s;
 
 	while (*s) {
 		if (*s >= '0' && *s <= '9') {
+			if (!Stop) {
+				idx2++;
+			}
+
 			idx++;
 		}
 		else if (*s == '.') {
-			Change = true;
+			Stop = true;
 		}
 		else {
 			return 0.0;
@@ -37,16 +42,27 @@ double str2double(const char* s) {
 	}
 
 	double* number = new double[idx];
-	double Pow = pow(10, idx - 1);
-	double Pow2 = 0.1;
+	double Pow = pow(10, idx2 - 1);
+
+	if (Pow == 0) {
+		Pow = 1;
+	}
+
+	idx = 0;
 	number[0] = 0;
 	s = save;
 
-	for (int i = 0; i < idx; i++) {
-		if (!Change) {
-			total += Pow * number[i];
-			Pow /= 10;
+	while (*s) {
+		if (*s != '.') {
+			number[idx] = *s - '0';
 		}
+		idx++;
+		s++;
+	}
+
+	for (int i = 0; i < ; i++) {
+		total += Pow * number[i];
+		Pow /= 10;
 	}
 
 	delete[] number;
