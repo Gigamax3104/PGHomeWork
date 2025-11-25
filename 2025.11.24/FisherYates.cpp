@@ -18,30 +18,13 @@ int main() {
 void FisherYates(int list[]) {
 	srand((unsigned int)time(NULL));
 
-	int idx = 0;
 	int random = 0;
-	int memory[MAX - 1];
 
 	for (int i = MAX - 1; i > 1; i--) {
-		random = rand() % (i - 1);
+		random = rand() % MAX;
 
-		if (idx > 0) {
-			for (int i = 0; i < idx;) {
-
-				if (list[random] != memory[i]) {
-					i++;
-				}
-				else {
-					random = rand() % (i - 1);
-					i = 0;
-				}
-			}
-		}
-
-		memory[idx] = list[random];
 		int save = list[i];
 		list[i] = list[random];
 		list[random] = save;
-		idx++;
 	}
 }

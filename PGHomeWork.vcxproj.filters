@@ -41,7 +41,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FisherYates.cpp">
+    <ClCompile Include="2025.11.24\FisherYates.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

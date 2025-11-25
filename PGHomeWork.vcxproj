@@ -22,7 +22,7 @@
     <ClInclude Include="calc.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FisherYates.cpp" />
+    <ClCompile Include="2025.11.24\FisherYates.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
